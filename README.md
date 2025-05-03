@@ -4,11 +4,11 @@ A modern Next.js template featuring [shadcn/ui](https://ui.shadcn.com/) componen
 
 ## Features
 
--   Next.js (App Router)
--   TypeScript
--   shadcn/ui components
--   Bun or npm support
--   Eslint & Prettier
+- Next.js (App Router)
+- TypeScript
+- shadcn/ui components
+- Bun or npm support
+- Eslint & Prettier
 
 ## Getting Started
 
@@ -69,7 +69,6 @@ Or using npm:
 ```sh
 npm run start
 ```
-
 
 ## License
 

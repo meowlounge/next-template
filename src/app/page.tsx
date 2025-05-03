@@ -1,15 +1,16 @@
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 import {
 	Card,
 	CardContent,
-	CardHeader,
-	CardTitle,
 	CardDescription,
 	CardFooter,
+	CardHeader,
+	CardTitle,
 } from '@/components/ui/card';
 import { Code } from '@/components/ui/code';
-import { ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
 	return (

@@ -1,10 +1,12 @@
 import './globals.css';
+
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
+import { Geist, Geist_Mono } from 'next/font/google';
+
 import { DottedBackground } from '@/components/eagle/dotted';
-import { ThemeToggle } from '@/components/eagle/theme-toggle';
 import { ReactScan } from '@/components/eagle/react-scan';
+import { ThemeToggle } from '@/components/eagle/theme-toggle';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
