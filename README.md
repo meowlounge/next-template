@@ -31,7 +31,7 @@ npm install
 Using Bun:
 
 ```sh
-bun run dev
+bun dev
 ```
 
 Or using npm:
@@ -61,7 +61,7 @@ npm run build
 Using Bun:
 
 ```sh
-bun run start
+bun start
 ```
 
 Or using npm:
@@ -70,17 +70,6 @@ Or using npm:
 npm run start
 ```
 
-## Project Structure
-
--   `src/app/` — App directory (entry, layout, pages)
--   `src/components/` — UI and custom components
--   `src/lib/` — Utility functions
-
-## Customization
-
--   Edit `src/app/layout.tsx` for global layout
--   Add or modify components in `src/components/`
--   Update styles in `src/app/globals.css`
 
 ## License
 
