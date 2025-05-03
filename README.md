@@ -2,14 +2,6 @@
 
 A modern Next.js template featuring [shadcn/ui](https://ui.shadcn.com/) components, TypeScript from prodbyeagle. Ideal for rapid prototyping and scalable web apps.
 
-## Features
-
-- Next.js (App Router)
-- TypeScript
-- shadcn/ui components
-- Bun or npm support
-- Eslint & Prettier
-
 ## Getting Started
 
 ### 1. Install dependencies
@@ -47,13 +39,13 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 Using Bun:
 
 ```sh
-bun run build
+bun cook
 ```
 
 Or using npm:
 
 ```sh
-npm run build
+npm run cook
 ```
 
 ### 4. Start the production server
