@@ -1,52 +1,110 @@
-import { ArrowRight } from 'lucide-react';
+'use client';
+
+import { motion } from 'framer-motion';
+import { ArrowRight, ImageIcon, Palette } from 'lucide-react';
 import Link from 'next/link';
 
+import { InstallationTabs } from '@/components/install-tabs';
 import { Button } from '@/components/ui/button';
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card';
-import { Code } from '@/components/ui/code';
+import { Card } from '@/components/ui/card';
 
-export default function HomePage() {
+type Feature = {
+	title: string;
+	description: string;
+	icon: React.ReactNode;
+};
+
+const FEATURES: Feature[] = [
+	{
+		title: 'Multi-format Output',
+		icon: <Palette className='size-6 text-primary' />,
+		description:
+			'Extract colors in rgb, hex, or hsl – perfect for design tools, UIs, and theming systems.',
+	},
+	{
+		title: 'File & Blob Support',
+		icon: <ImageIcon className='size-6 text-primary' />,
+		description:
+			'Drop any image in your browser—no uploads or external API calls. Pure frontend magic.',
+	},
+];
+
+const fadeUp = {
+	hidden: { opacity: 0, y: 20 },
+	show: (i = 0) => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: i * 0.1,
+			duration: 0.4,
+			ease: 'easeOut',
+		},
+	}),
+};
+
+export default function LandingPage() {
 	return (
-		<main className='relative flex min-h-screen flex-col items-center justify-center px-4 py-12'>
-			<Card className='w-full max-w-md'>
-				<CardHeader className='space-y-1 text-center'>
-					<CardTitle className='text-2xl'>
-						🦅 @prodbyeagle Next Starter
-					</CardTitle>
-					<CardDescription className='text-base'>
-						A minimal Next.js + shadcn/ui template with theming &
-						best practices.
-					</CardDescription>
-				</CardHeader>
-
-				<CardContent className='space-y-4 text-center'>
-					<p className='text-base text-muted-foreground'>
-						Edit <Code>src/app/page.tsx</Code> and see live updates.
-					</p>
-				</CardContent>
-
-				<CardFooter className='flex justify-center space-x-3'>
-					<Button variant='outline' asChild>
-						<Link href='https://ui.shadcn.com/docs'>
-							ShadcnUI Docs{' '}
-							<ArrowRight className='size-4 ml-0.5' />
+		<motion.main
+			initial='hidden'
+			animate='show'
+			variants={{ show: { transition: { staggerChildren: 0.1 } } }}
+			className='container max-w-5xl mx-auto px-6 py-24 space-y-24'>
+			<motion.section variants={fadeUp} className='text-center space-y-8'>
+				<h1 className='text-5xl md:text-6xl font-extrabold leading-tight'>
+					🦅 Extract, Format & Use{' '}
+					<span className='text-destructive'>Colors</span> From Images
+				</h1>
+				<p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+					@prodbyeagle/color is a blazing-fast, dependency-free
+					TypeScript library to analyze and format dominant image
+					colors in RGB, HEX, and HSL.
+				</p>
+				<div className='flex flex-wrap justify-center gap-4'>
+					<Button asChild size='lg'>
+						<Link href='/extract'>
+							Try it now <ArrowRight className='ml-2 size-4' />
 						</Link>
 					</Button>
-					<Button variant='outline' asChild>
-						<Link href='https://nextjs.org/docs'>
-							Next.js Docs{' '}
-							<ArrowRight className='size-4 ml-0.5' />
+					<Button asChild size='lg' variant='outline'>
+						<Link
+							href='https://github.com/prodbyeagle/color'
+							target='_blank'
+							rel='noopener noreferrer'>
+							View on GitHub
 						</Link>
 					</Button>
-				</CardFooter>
-			</Card>
-		</main>
+				</div>
+			</motion.section>
+
+			<section className='grid sm:grid-cols-2 gap-8'>
+				{FEATURES.map((feature, i) => (
+					<motion.div
+						key={feature.title}
+						custom={i}
+						variants={fadeUp}>
+						<Card className='p-6'>
+							<div className='flex items-start gap-4'>
+								<div>{feature.icon}</div>
+								<div>
+									<h3 className='text-lg font-semibold'>
+										{feature.title}
+									</h3>
+									<p className='text-muted-foreground'>
+										{feature.description}
+									</p>
+								</div>
+							</div>
+						</Card>
+					</motion.div>
+				))}
+			</section>
+
+			<motion.section variants={fadeUp}>
+				<h2 className='text-3xl font-bold text-center mb-8'>
+					Installation Guide
+				</h2>
+				<InstallationTabs />
+			</motion.section>
+		</motion.main>
 	);
 }
