@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+import { Code } from '@/components/eagle/code';
 import { Button } from '@/components/ui/button';
 import {
 	Card,
@@ -10,7 +11,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card';
-import { Code } from '@/components/ui/code';
 
 export default function HomePage() {
 	return (
@@ -33,16 +33,16 @@ export default function HomePage() {
 				</CardContent>
 
 				<CardFooter className='flex justify-center space-x-3'>
-					<Button variant='outline' asChild>
+					<Button className='group' variant='outline' asChild>
 						<Link href='https://ui.shadcn.com/docs'>
 							ShadcnUI Docs{' '}
-							<ArrowRight className='size-4 ml-0.5' />
+							<ArrowRight className='size-4 group-hover:translate-x-1  transition-all duration-200' />
 						</Link>
 					</Button>
-					<Button variant='outline' asChild>
+					<Button className='group' variant='outline' asChild>
 						<Link href='https://nextjs.org/docs'>
 							Next.js Docs{' '}
-							<ArrowRight className='size-4 ml-0.5' />
+							<ArrowRight className='size-4 group-hover:translate-x-1  transition-all duration-200' />
 						</Link>
 					</Button>
 				</CardFooter>
