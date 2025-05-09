@@ -13,7 +13,7 @@ export function Code({ className, ...props }: CodeProps) {
 		<code
 			className={cn(
 				'rounded bg-muted px-1 py-0.5 font-mono text-sm',
-				'text-muted-foreground transition-all duration-300',
+				'text-accent-foreground/70 transition-all duration-300',
 				className
 			)}
 			{...props}
