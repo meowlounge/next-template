@@ -35,19 +35,19 @@ export function ThemeToggle() {
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end'>
 				<DropdownMenuItem
-					className='mb-1 duration-100'
+					className='mb-1 duration-75'
 					onClick={() => setTheme('light')}>
 					<Sun className='mr-2 h-4 w-4' />
 					Light
 				</DropdownMenuItem>
 				<DropdownMenuItem
-					className='mb-1 duration-100'
+					className='mb-1 duration-75'
 					onClick={() => setTheme('dark')}>
 					<Moon className='mr-2 h-4 w-4' />
 					Dark
 				</DropdownMenuItem>
 				<DropdownMenuItem
-					className='duration-100'
+					className='duration-75'
 					onClick={() => setTheme('system')}>
 					<Monitor className='mr-2 h-4 w-4' />
 					System
