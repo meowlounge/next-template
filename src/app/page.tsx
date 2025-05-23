@@ -14,11 +14,11 @@ import {
 
 export default function HomePage() {
 	return (
-		<main className='relative flex min-h-screen flex-col items-center justify-center px-4 py-12'>
-			<Card className='w-full max-w-md'>
+		<main className='relative flex min-h-screen flex-col items-center justify-center px-6 sm:px-8 py-12'>
+			<Card className='w-full max-w-md sm:max-w-lg'>
 				<CardHeader className='space-y-1 text-center'>
 					<CardTitle className='text-2xl'>
-						🦅 @prodbyeagle Next Starter
+						🦅 @eagle NextJS Template
 					</CardTitle>
 					<CardDescription className='text-base'>
 						A minimal Next.js + shadcn/ui template with theming &
@@ -34,15 +34,21 @@ export default function HomePage() {
 
 				<CardFooter className='flex justify-center space-x-3'>
 					<Button className='group' variant='outline' asChild>
-						<Link href='https://ui.shadcn.com/docs'>
+						<Link
+							href='https://ui.shadcn.com/docs'
+							aria-label='Open Shadcn UI documentation'
+							prefetch={false}>
 							ShadcnUI Docs{' '}
-							<ArrowRight className='size-4 group-hover:translate-x-1  transition-all duration-200' />
+							<ArrowRight className='size-4 transition-transform duration-200 group-hover:translate-x-1' />
 						</Link>
 					</Button>
 					<Button className='group' variant='outline' asChild>
-						<Link href='https://nextjs.org/docs'>
+						<Link
+							href='https://nextjs.org/docs'
+							aria-label='Open NextJS documentation'
+							prefetch={false}>
 							Next.js Docs{' '}
-							<ArrowRight className='size-4 group-hover:translate-x-1  transition-all duration-200' />
+							<ArrowRight className='size-4 transition-transform duration-200 group-hover:translate-x-1' />
 						</Link>
 					</Button>
 				</CardFooter>
