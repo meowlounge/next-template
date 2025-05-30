@@ -7,6 +7,7 @@ import './globals.css';
 import { DottedBackground } from '@/components/eagle/dotted';
 import { ReactScan } from '@/components/eagle/react-scan';
 import { ThemeToggle } from '@/components/eagle/theme-toggle';
+import { Toaster } from '@/components/eagle/toaster';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -40,6 +41,7 @@ export default function RootLayout({
 					<div className='absolute top-4 right-4 z-50 pointer-events-auto'>
 						<ThemeToggle />
 					</div>
+
 					<div className='fixed inset-0 -z-10'>
 						<DottedBackground
 							dotColor='var(--foreground)'
@@ -53,6 +55,9 @@ export default function RootLayout({
 						{children}
 					</div>
 				</ThemeProvider>
+
+				{/* Toast container: Wraps all toast notifications. Comment out if not needed. */}
+				<Toaster />
 
 				{/* Developer Component ( view fps + fps drops and rendering) */}
 				<ReactScan />
