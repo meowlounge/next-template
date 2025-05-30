@@ -1,8 +1,9 @@
 'use client';
 
+import { useHasMounted } from '@/hooks/useHasMounted';
 import { Monitor, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import type { JSX } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,17 +13,28 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function ThemeToggle() {
+/**
+ * A client-side dropdown menu for switching between light, dark, and system themes.
+ *
+ * @remarks
+ * This component uses `next-themes` for managing color mode preferences.
+ * It defers rendering until the component is mounted on the client to prevent hydration mismatches.
+ * It renders a ghost button that animates between sun and moon icons, depending on the theme.
+ *
+ * @returns A dropdown menu JSX element for toggling the app theme.
+ *
+ * @example
+ * ```tsx
+ * <ThemeToggle />
+ * ```
+ *
+ * @author prodbyeagle
+ */
+export function ThemeToggle(): JSX.Element {
 	const { setTheme } = useTheme();
-	const [mounted, setMounted] = useState(false);
+	const hasMounted = useHasMounted();
 
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) {
-		return null;
-	}
+	if (!hasMounted) return <></>;
 
 	return (
 		<DropdownMenu>
