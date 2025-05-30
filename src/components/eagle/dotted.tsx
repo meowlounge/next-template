@@ -1,15 +1,31 @@
 'use client';
 
+import type { DottedBackgroundProps } from '@/types';
 import type React from 'react';
 
 import { cn } from '@/lib/utils';
 
-interface DottedBackgroundProps {
-	dotColor?: string;
-	dotSize?: number;
-	spacing?: number;
-	className?: string;
-}
+/**
+ * A decorative background component that renders a grid of evenly spaced dots.
+ *
+ * @param props - Configuration options for dot color, size, spacing, and CSS classes.
+ *
+ * @returns A `div` element with a dotted background pattern.
+ *
+ * @example
+ * ```tsx
+ * <div className="relative h-64 w-64">
+ *   <DottedBackground
+ *     dotColor="var(--muted-foreground)" // using shadcn-ui CSS variables for consistent theming
+ *     dotSize={2}
+ *     spacing={20}
+ *   />
+ *   <p>Content on top of dotted background.</p>
+ * </div>
+ * ```
+ *
+ * @author prodbyeagle
+ */
 
 export function DottedBackground({
 	dotColor = 'var(--muted-foreground)',
