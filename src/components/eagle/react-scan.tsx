@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useEffect } from 'react';
+import { useEffect, type JSX } from 'react';
 import { scan } from 'react-scan';
 
 /**
