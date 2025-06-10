@@ -34,7 +34,7 @@ export default function NotFoundPage() {
 				<CardFooter className='flex justify-center'>
 					<Button className='group' variant='outline' asChild>
 						<Link href='/'>
-							<ArrowLeft className='size-4 mr-1 group-hover:-translate-x-1  transition-all duration-200' />
+							<ArrowLeft className='size-4 mr-1 group-hover:-translate-x-1 transition-all duration-200' />
 							Go Back Home
 						</Link>
 					</Button>

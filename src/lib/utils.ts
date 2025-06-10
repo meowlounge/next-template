@@ -12,7 +12,7 @@ import { twMerge } from 'tailwind-merge';
  * cn('p-2', 'bg-red-500', { 'text-white': true, 'hidden': false });
  * // => 'p-2 bg-red-500 text-white'
  * ```
- * 
+ *
  * @author shadcn
  */
 export function cn(...inputs: ClassValue[]): string {
