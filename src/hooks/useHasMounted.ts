@@ -14,6 +14,8 @@ import { useEffect, useState } from 'react';
  * if (!hasMounted) return null;
  * return <ClientOnlyComponent />;
  * ```
+ *
+ * @author prodbyeagle
  */
 export function useHasMounted(): boolean {
 	const [hasMounted, setHasMounted] = useState(false);
