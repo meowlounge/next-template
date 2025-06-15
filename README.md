@@ -1,67 +1,94 @@
-# Next.js + shadcn/ui Template
+# Eagle Next.js Template
 
-A modern Next.js template featuring [shadcn/ui](https://ui.shadcn.com/) components, TypeScript from prodbyeagle. Ideal for rapid prototyping and scalable web apps.
+A modern, opinionated Next.js 14+ template featuring TypeScript, app directory, dark/light/system theme toggle, and a clean, extendable component structure. Built for rapid prototyping and scalable production apps.
+
+---
+
+## Features
+
+- **Next.js 14+** with `/app` directory and server components
+- **TypeScript** for type safety
+- **Theme Toggle** (light/dark/system) using [next-themes](https://github.com/pacocoursey/next-themes)
+- **Reusable UI Components** (Button, Dropdown, Card, etc.)
+- **Lucide Icons** for modern SVG icons
+- **Custom Hooks** (e.g., `useHasMounted`)
+- **Tailwind CSS** for utility-first styling
+- **Ready-to-edit Home Page** with live reload
+- **Accessible, semantic markup**
+- **Easy to extend and customize**
+
+---
 
 ## Getting Started
 
-### 1. Install dependencies
+### 1. Clone the repository
 
-Using Bun:
-
-```sh
-bun install
+```bash
+git clone https://github.com/prodbyeagle/next-template.git
+cd next-template
 ```
 
-Or using npm:
+### 2. Install dependencies
 
-```sh
+```bash
 npm install
+# or
+bun i // bun update --latest
 ```
 
-### 2. Run the development server
+### 3. Run the development server
 
-Using Bun:
-
-```sh
-bun dev
-```
-
-Or using npm:
-
-```sh
+```bash
 npm run dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-### 3. Build for production
+---
 
-Using Bun:
+## Project Structure
 
-```sh
-bun cook
+```
+src/
+  app/                # App directory (Next.js 14+)
+    layout.tsx        # Root layout
+    page.tsx          # Home page
+  components/
+    eagle/            # Custom eagle components (e.g., theme-toggle)
+    ui/               # Reusable UI primitives (button, dropdown, etc.)
+  hooks/              # Custom React hooks
+  lib/                # Utilities and helpers
+public/               # Static assets
 ```
 
-Or using npm:
+---
 
-```sh
-npm run cook
-```
+## Customization
 
-### 4. Start the production server
+- **UI Components:** Extend or modify components in [`src/components/ui/`](src/components/ui/) for your design system.
+- **Home Page:** Start building your app in [`src/app/page.tsx`](src/app/page.tsx).
 
-Using Bun:
+---
 
-```sh
-bun start
-```
+## Dependencies
 
-Or using npm:
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+- [lucide-react](https://lucide.dev/)
 
-```sh
-npm run start
-```
+---
+
+## Author
+
+Created by **prodbyeagle**.
+
+---
 
 ## License
 
-MIT
+[MIT](LICENSE)
