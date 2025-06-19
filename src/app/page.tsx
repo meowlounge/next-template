@@ -1,8 +1,8 @@
-import { ArrowRight, Github, Sparkles } from 'lucide-react';
-import Link from 'next/link';
-
 import { Code } from '@/components/eagle/code';
 import { Button } from '@/components/ui/button';
+
+import { ArrowRight, Github, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePage() {
 	return (

@@ -1,10 +1,5 @@
 'use client';
 
-import { useHasMounted } from '@/hooks/use-has-mounted';
-import { Monitor, Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import type { JSX } from 'react';
-
 import { Button } from '@/components/ui/button';
 import {
 	DropdownMenu,
@@ -12,6 +7,12 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+
+import { useHasMounted } from '@/hooks/use-has-mounted';
+
+import { Monitor, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import type { JSX } from 'react';
 
 /**
  * A client-side dropdown menu for switching between light, dark, and system themes.
