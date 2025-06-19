@@ -37,7 +37,7 @@ export default function NotFoundPage() {
 					<p className='text-sm text-muted-foreground'>
 						If you believe this is an error, please{' '}
 						<Link
-							href='/contact'
+							href='#'
 							className='hover:text-primary text-foreground transition-colors duration-200 underline decoration-dotted underline-offset-4'>
 							contact support
 						</Link>
