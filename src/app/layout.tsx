@@ -7,6 +7,7 @@ import './globals.css';
 import {
 	DottedBackground,
 	ReactScan,
+	ScreenSizeIndicator,
 	ThemeToggle,
 	Toaster,
 } from '@/components';
@@ -24,7 +25,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: '🦅 @prodbyeagle',
 	description: 'Eagle Template for Next.js',
-	icons: 'https://kappa.lol/WTiY5',
+	icons: 'https://cdn.discordapp.com/emojis/1385016033831555233.webp?size=32&animated=true',
 };
 
 export default function RootLayout({
@@ -60,6 +61,8 @@ export default function RootLayout({
 
 				{/* Toast container: Wraps all toast notifications. Comment out if not needed. */}
 				<Toaster />
+
+				<ScreenSizeIndicator debug={false} />
 
 				{/* Developer Component ( view fps + fps drops and rendering) */}
 				<ReactScan />

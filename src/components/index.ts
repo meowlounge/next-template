@@ -1,3 +1,4 @@
+export { ScreenSizeIndicator } from './eagle/screen-size';
 export { Code } from './eagle/code';
 export { DocsLink } from './eagle/docs-link';
 export { DottedBackground } from './eagle/dotted';

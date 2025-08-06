@@ -17,22 +17,6 @@ const eslintConfig = [
 	...compat.extends('next/core-web-vitals', 'next'),
 	{ ignores: ['dist'] },
 	{
-		files: ['src/**/*.{tsx,ts,mts,mjs,js,jsx}', 'eslint.config.mjs'],
-		settings: {
-			react: {
-				version: '18',
-			},
-		},
-		...react.configs.flat.recommended,
-		rules: {
-			...react.configs.flat.recommended.rules,
-			'react/react-in-jsx-scope': 'off',
-			'react/prop-types': 'off',
-			'react/display-name': 'off',
-			'react/no-unescaped-entities': 'off',
-		},
-	},
-	{
 		plugins: {
 			'@stylistic': stylistic,
 			'@typescript-eslint': tseslint.plugin,
@@ -61,7 +45,6 @@ const eslintConfig = [
 			// note: Style Rules
 			'@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 			'@stylistic/no-mixed-spaces-and-tabs': 'error',
-			'@stylistic/arrow-parens': ['error', 'as-needed'],
 			'@stylistic/eol-last': ['error', 'always'],
 			'@stylistic/no-multi-spaces': 'error',
 			'@stylistic/no-trailing-spaces': 'error',
