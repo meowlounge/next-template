@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 import { cn } from '@/lib/utils';
 
 import type React from 'react';

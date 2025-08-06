@@ -1,2 +1,0 @@
-Copyright (c) {year} {author}
-SPDX-License-Identifier: MIT

@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 import { Code } from '@/components/eagle/code';
 import { Button } from '@/components/ui/button';
 

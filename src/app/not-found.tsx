@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 import { Button } from '@/components/ui/button';
 
 import { Home } from 'lucide-react';

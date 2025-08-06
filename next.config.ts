@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {

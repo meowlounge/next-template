@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 'use client';
 
 import { useTheme } from 'next-themes';
