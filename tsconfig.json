@@ -18,7 +18,11 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@components/*": ["./components/*"],
+			"@utils/*": ["./utils/*"],
+			"@hooks/*": ["./hooks/*"],
+			"@lib/*": ["./lib/*"]
 		},
 		"plugins": [
 			{
@@ -26,6 +30,12 @@
 			}
 		]
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"eslint.config.mjs"
+	],
 	"exclude": ["node_modules"]
 }
