@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 prodbyeagle
+ * SPDX-License-Identifier: MIT
+ */
+
 'use client';
 
 import { Button } from '@/components/ui/button';

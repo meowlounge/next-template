@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 prodbyeagle
+ * SPDX-License-Identifier: MIT
+ */
+
 import { Code } from '@/components/eagle/code';
 import { Button } from '@/components/ui/button';
 
@@ -51,7 +56,7 @@ export default function HomePage() {
 						className='group text-base px-8'
 						asChild>
 						<Link
-							href='https://github.com/prodbyeagle/next-template'
+							href='/github'
 							aria-label='View on GitHub'
 							prefetch={false}>
 							<Github className='size-4 mr-2' />

@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 prodbyeagle
+ * SPDX-License-Identifier: MIT
+ */
+
 import { useEffect, useState } from 'react';
 
 /**

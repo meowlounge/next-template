@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 prodbyeagle
+ * SPDX-License-Identifier: MIT
+ */
+
 //*
 //* Shared types and interfaces used throughout the application.
 //*
@@ -15,4 +20,3 @@
 //*   children?: React.ReactNode;
 //* 	 ... // other specific props
 //* }
-//*
