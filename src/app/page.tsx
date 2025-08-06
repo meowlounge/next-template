@@ -1,6 +1,6 @@
-import { Code } from '@/components/eagle/code';
 import { Button } from '@/components/ui/button';
 
+import { Code, DocsLink } from '@/components';
 import { ArrowRight, Github, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
@@ -70,24 +70,15 @@ export default function HomePage() {
 					</p>
 
 					<div className='flex flex-wrap gap-6 justify-center text-sm text-muted-foreground'>
-						<Link
-							href='https://nextjs.org/docs'
-							className='hover:text-foreground transition-colors duration-200 underline decoration-dotted underline-offset-4'
-							prefetch={false}>
+						<DocsLink href='https://nextjs.org/docs'>
 							next-docs
-						</Link>
-						<Link
-							href='https://ui.shadcn.com/docs'
-							className='hover:text-foreground transition-colors duration-200 underline decoration-dotted underline-offset-4'
-							prefetch={false}>
+						</DocsLink>
+						<DocsLink href='https://ui.shadcn.com/docs'>
 							shadcn/ui-docs
-						</Link>
-						<Link
-							href='https://tailwindcss.com/docs'
-							className='hover:text-foreground transition-colors duration-200 underline decoration-dotted underline-offset-4'
-							prefetch={false}>
+						</DocsLink>
+						<DocsLink href='https://tailwindcss.com/docs'>
 							tailwind-v4-docs
-						</Link>
+						</DocsLink>
 					</div>
 				</div>
 			</div>

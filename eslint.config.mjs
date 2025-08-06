@@ -1,15 +1,8 @@
-/*
- * Copyright (c) 2025 prodbyeagle
- * SPDX-License-Identifier: MIT
- */
-
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 import { FlatCompat } from '@eslint/eslintrc';
 import stylistic from '@stylistic/eslint-plugin';
-import react from 'eslint-plugin-react';
-import header from 'eslint-plugin-simple-header';
 import unusedImports from 'eslint-plugin-unused-imports';
 import tseslint from 'typescript-eslint';
 
@@ -41,7 +34,6 @@ const eslintConfig = [
 	},
 	{
 		plugins: {
-			'simple-header': header,
 			'@stylistic': stylistic,
 			'@typescript-eslint': tseslint.plugin,
 			'unused-imports': unusedImports,
@@ -64,18 +56,9 @@ const eslintConfig = [
 			},
 		},
 		rules: {
-			'simple-header/header': [
-				'error',
-				{
-					files: ['header.txt'],
-					templates: {
-						author: ['.*', 'prodbyeagle'],
-					},
-				},
-			],
 			'unused-imports/no-unused-imports': 'error',
 
-			// Style Rules
+			// note: Style Rules
 			'@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 			'@stylistic/no-mixed-spaces-and-tabs': 'error',
 			'@stylistic/arrow-parens': ['error', 'as-needed'],
